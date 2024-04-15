@@ -157,7 +157,42 @@ int main()
 
 ![image-20240415124759361](CPlusPlus实战.assets/image-20240415124759361.png) 
 
+## 3. 调试多进程
 
+修改：.vscode/launch.json
+
+```json
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cppdbg",
+            "request": "launch",
+            "name": "gdb Debug",
+            "program": "${workspaceFolder}${pathSeparator}bin${pathSeparator}${fileBasenameNoExtension}",
+            "stopAtEntry": false,
+            "preLaunchTask": "debug_build",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "只调试子进程",
+                    "text": "set follow-fork-mode child",
+                    "ignoreFailures": true
+                },
+                {
+                    "description": "表示调试当前进程的时候，其它的进程继续运行",
+                    "text": "set detach-on-fork on",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+    ]
+}
+```
 
 
 
