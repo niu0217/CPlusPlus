@@ -1,5 +1,9 @@
 # 编译CPlusPlus代码2
 
+## 参考资料
+
++ https://blog.csdn.net/qq_45488242/article/details/128414756
+
 ## 1. 调试
 
 ### 1.1 创建tasks.json文件
@@ -194,4 +198,10 @@ launch.json文件是一个调试配置文件。
 ## 2. 设置
 
 相比于其他插件都是把设置项存储于Visual Studio Code的settings.json文件中，C/C++插件是通过c_cpp_properties.json文件来配置编译器、头文件路径、C++标准（默认是C++17）等设置项的。
+
+## 3 常用变量
+
+![image-20240414212250111](编译CPlusPlus代码2.assets/image-20240414212250111.png) 
+
+![bianlian](编译CPlusPlus代码2.assets/bianlian.png) 
 
